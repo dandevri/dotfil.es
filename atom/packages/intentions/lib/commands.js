@@ -36,7 +36,8 @@ export default class Commands {
         if (this.active && this.active.type === 'list') {
           return
         }
-        this.processListShow()
+        const subscriptions = new CompositeDisposable()
+        this.processListShow(subscriptions)
 
         if (!e.originalEvent || e.originalEvent.type !== 'keydown') {
           return
@@ -44,7 +45,6 @@ export default class Commands {
 
         setImmediate(() => {
           let matched = true
-          const subscriptions = new CompositeDisposable()
 
           subscriptions.add(atom.keymaps.onDidMatchBinding(function({ binding }) {
             matched = matched && CORE_COMMANDS.has(binding.command)
@@ -54,10 +54,8 @@ export default class Commands {
               return
             }
             subscriptions.dispose()
-            this.subscriptions.remove(subscriptions)
             this.processListHide()
           }))
-          this.subscriptions.add(subscriptions)
         })
       },
       'intentions:hide': () => {
@@ -67,21 +65,20 @@ export default class Commands {
         if (this.active && this.active.type === 'highlight') {
           return
         }
-        this.processHighlightsShow()
+        const subscriptions = new CompositeDisposable()
+        this.processHighlightsShow(subscriptions)
 
         if (!e.originalEvent || e.originalEvent.type !== 'keydown') {
           return
         }
         const keyCode = e.originalEvent.keyCode
-        const subscriptions = disposableEvent(document.body, 'keyup', upE => {
+        subscriptions.add(disposableEvent(document.body, 'keyup', (upE) => {
           if (upE.keyCode !== keyCode) {
             return
           }
           subscriptions.dispose()
-          this.subscriptions.remove(subscriptions)
           this.processHighlightsHide()
-        })
-        this.subscriptions.add(subscriptions)
+        }))
       },
     }))
     this.subscriptions.add(atom.commands.add('atom-text-editor.intentions-list:not([mini])', {
@@ -108,7 +105,7 @@ export default class Commands {
       }),
     }))
   }
-  async processListShow() {
+  async processListShow(subscription: ?(CompositeDisposable | Disposable) = null) {
     if (this.active) {
       switch (this.active.type) {
         case 'list':
@@ -120,22 +117,28 @@ export default class Commands {
       }
     }
     const editor = atom.workspace.getActiveTextEditor()
+    if (!editor) return
     const editorElement = atom.views.getView(editor)
     const subscriptions = new CompositeDisposable()
+    if (subscription) {
+      subscriptions.add(subscription)
+    }
 
     if (!await this.shouldListShow(editor)) {
       return
     }
     this.active = { type: 'list', subscriptions }
-    subscriptions.add(new Disposable(() => {
+    subscriptions.add(() => {
       if (this.active && this.active.type === 'list' && this.active.subscriptions === subscriptions) {
         this.processListHide()
         this.active = null
       }
       editorElement.classList.remove('intentions-list')
-    }))
+    })
     subscriptions.add(disposableEvent(document.body, 'mouseup', function() {
-      subscriptions.dispose()
+      setTimeout(function() {
+        subscriptions.dispose()
+      }, 10)
     }))
     editorElement.classList.add('intentions-list')
   }
@@ -160,7 +163,7 @@ export default class Commands {
     }
     this.emitter.emit('list-confirm')
   }
-  async processHighlightsShow() {
+  async processHighlightsShow(subscription: ?(CompositeDisposable | Disposable) = null) {
     if (this.active) {
       switch (this.active.type) {
         case 'highlight':
@@ -172,20 +175,24 @@ export default class Commands {
       }
     }
     const editor = atom.workspace.getActiveTextEditor()
+    if (!editor) return
     const editorElement = atom.views.getView(editor)
     const subscriptions = new CompositeDisposable()
     const shouldProcess = await this.shouldHighlightsShow(editor)
+    if (subscription) {
+      subscriptions.add(subscription)
+    }
 
     if (!shouldProcess) {
       return
     }
     this.active = { type: 'highlight', subscriptions }
-    subscriptions.add(new Disposable(() => {
+    subscriptions.add(() => {
       if (this.active && this.active.type === 'highlight' && this.active.subscriptions === subscriptions) {
         this.processHighlightsHide()
       }
       editorElement.classList.remove('intentions-highlights')
-    }))
+    })
     editorElement.classList.add('intentions-highlights')
   }
   processHighlightsHide() {

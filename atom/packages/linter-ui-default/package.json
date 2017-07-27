@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
+        "raw": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
-        "spec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
+        "rawSpec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
+        "spec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/apm-install-dir-11763-5898-19dj3dn.wb9ms4i"
+      "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/apm-install-dir-117627-22430-htldi3.2fpfei2j4i"
     ]
   ],
-  "_from": "../d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
-  "_id": "linter-ui-default@1.6.2",
+  "_from": "../d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
+  "_id": "linter-ui-default@1.6.3",
   "_inCache": true,
   "_location": "/linter-ui-default",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
+    "raw": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
-    "spec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
+    "rawSpec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
+    "spec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
-  "_shasum": "2cd669df4bd1740382364347ea8f429401e9dcd0",
+  "_resolved": "file:../d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
+  "_shasum": "1aa958af941aff923c6d2dd66057c117d7aed3d6",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-11763-5898-dsn9ia.gnyeklnmi/package.tgz",
-  "_where": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/apm-install-dir-11763-5898-19dj3dn.wb9ms4i",
+  "_spec": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/d-117627-22430-1friw4.7kk4t2o6r/package.tgz",
+  "_where": "/private/var/folders/9x/98h5wfr9721822s23sk2xg9c0000gn/T/apm-install-dir-117627-22430-htldi3.2fpfei2j4i",
   "bugs": {
     "url": "https://github.com/steelbrain/linter-ui-default/issues"
   },
@@ -228,13 +228,13 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . )"
   },
-  "version": "1.6.2",
+  "version": "1.6.3",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "asap",
-        "version": "2.0.5",
+        "version": "2.0.6",
         "path": "node_modules/asap/asap.js"
       },
       {
@@ -274,7 +274,7 @@
       },
       {
         "name": "fbjs",
-        "version": "0.8.12",
+        "version": "0.8.14",
         "path": "node_modules/fbjs/index.js"
       },
       {
@@ -394,7 +394,7 @@
       },
       {
         "name": "semver",
-        "version": "5.3.0",
+        "version": "5.4.1",
         "path": "node_modules/semver/semver.js"
       },
       {
@@ -409,7 +409,7 @@
       },
       {
         "name": "ua-parser-js",
-        "version": "0.7.13",
+        "version": "0.7.14",
         "path": "node_modules/ua-parser-js/src/ua-parser.js"
       },
       {
@@ -478,8 +478,8 @@
         "node_modules/strip-bom-buf/package.json",
         "node_modules/ua-parser-js/bower.json",
         "node_modules/ua-parser-js/package.json",
-        "node_modules/ua-parser-js/ua-parser-js.jquery.json",
         "node_modules/whatwg-fetch/package.json",
+        "package-lock.json",
         "package.json"
       ],
       ".js": [

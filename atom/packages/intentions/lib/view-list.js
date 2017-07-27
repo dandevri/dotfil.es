@@ -1,6 +1,7 @@
 /* @flow */
 
-import { CompositeDisposable, Emitter, Disposable } from 'atom'
+import { CompositeDisposable, Emitter } from 'sb-event-kit'
+import type { Disposable } from 'sb-event-kit'
 import type { TextEditor } from 'atom'
 
 import ListElement from './elements/list'
@@ -20,7 +21,7 @@ export default class ListView {
     this.subscriptions.add(this.element)
   }
   activate(editor: TextEditor, suggestions: Array<ListItem>) {
-    this.element.render(suggestions, selected => {
+    this.element.render(suggestions, (selected) => {
       this.emitter.emit('did-select', selected)
       this.dispose()
     })
@@ -32,9 +33,9 @@ export default class ListView {
       type: 'overlay',
       item: this.element,
     })
-    this.subscriptions.add(new Disposable(function() {
+    this.subscriptions.add(function() {
       marker.destroy()
-    }))
+    })
   }
   move(movement: ListMovement) {
     this.element.move(movement)

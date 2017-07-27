@@ -1,6 +1,6 @@
 /* @flow */
 
-import { CompositeDisposable, Disposable } from 'sb-event-kit'
+import { CompositeDisposable } from 'sb-event-kit'
 import { it, beforeEach, wait } from 'jasmine-fix'
 import Commands from '../lib/commands'
 import { getKeyboardEvent } from './helpers'
@@ -19,6 +19,10 @@ describe('Commands', function() {
     atom.workspace.destroyActivePane()
     commands.dispose()
   })
+  function dispatchEventOnBody(event) {
+    // $FlowIgnore: Document.body is never null in our case
+    document.body.dispatchEvent(event)
+  }
 
   describe('Highlights', function() {
     it('does nothing if not activated and we try to deactivate', function() {
@@ -89,9 +93,9 @@ describe('Commands', function() {
     it('disposes list if available', async function() {
       let disposed = false
       const active = { type: 'list', subscriptions: new CompositeDisposable() }
-      active.subscriptions.add(new Disposable(function() {
+      active.subscriptions.add(function() {
         disposed = true
-      }))
+      })
       commands.active = active
       expect(disposed).toBe(false)
       await commands.processHighlightsShow()
@@ -124,7 +128,7 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
@@ -146,6 +150,30 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
       })
+      it('disposes the keyboard listener when we dispose it with the class function', async function() {
+        let timesShow = 0
+        let timesHide = 0
+        commands.onHighlightsShow(function() {
+          timesShow++
+          return Promise.resolve(true)
+        })
+        commands.onHighlightsHide(function() {
+          timesHide++
+        })
+        spyOn(commands, 'processHighlightsHide').andCallThrough()
+        expect(timesShow).toBe(0)
+        expect(timesHide).toBe(0)
+        atom.keymaps.dispatchCommandEvent('intentions:highlight', editorView, getKeyboardEvent('keydown'))
+        await wait(10)
+        commands.processHighlightsHide()
+        expect(timesShow).toBe(1)
+        expect(timesHide).toBe(1)
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
+        await wait(10)
+        expect(timesShow).toBe(1)
+        expect(timesHide).toBe(1)
+        expect(commands.processHighlightsHide.calls.length).toBe(1)
+      })
       it('just activates if keyboard event is not keydown', async function() {
         let timesShow = 0
         let timesHide = 0
@@ -162,7 +190,7 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
@@ -186,7 +214,7 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
-        document.body.dispatchEvent(getKeyboardEvent('keyup', 1))
+        dispatchEventOnBody(getKeyboardEvent('keyup', 1))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
@@ -210,7 +238,7 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(1)
@@ -346,9 +374,9 @@ describe('Commands', function() {
       expect(timesShow).toBe(1)
       expect(timesHide).toBe(1)
       commands.active = { type: 'highlight', subscriptions: new CompositeDisposable() }
-      commands.active.subscriptions.add(new Disposable(function() {
+      commands.active.subscriptions.add(function() {
         disposed = true
-      }))
+      })
       expect(disposed).toBe(false)
       await commands.processListShow()
       commands.processListHide()
@@ -389,7 +417,7 @@ describe('Commands', function() {
       expect(timesShow).toBe(1)
       expect(timesHide).toBe(1)
       await commands.processListShow()
-      document.body.dispatchEvent(new MouseEvent('mouseup'))
+      dispatchEventOnBody(new MouseEvent('mouseup'))
       await wait(10)
       expect(timesShow).toBe(2)
       expect(timesHide).toBe(2)
@@ -409,7 +437,7 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
@@ -431,13 +459,37 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
         commands.processListHide()
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(1)
+      })
+      it('disposes the keyboard listener when we dispose it with the class function', async function() {
+        let timesShow = 0
+        let timesHide = 0
+        commands.onListShow(function() {
+          timesShow++
+          return Promise.resolve(true)
+        })
+        commands.onListHide(function() {
+          timesHide++
+        })
+        spyOn(commands, 'processListHide').andCallThrough()
+        expect(timesShow).toBe(0)
+        expect(timesHide).toBe(0)
+        atom.keymaps.dispatchCommandEvent('intentions:show', editorView, getKeyboardEvent('keypress'))
+        await wait(10)
+        commands.processListHide()
+        expect(timesShow).toBe(1)
+        expect(timesHide).toBe(1)
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
+        await wait(10)
+        expect(timesShow).toBe(1)
+        expect(timesHide).toBe(1)
+        expect(commands.processListHide.calls.length).toBe(1)
       })
       it('ignores more than one activation requests', async function() {
         let timesShow = 0
@@ -467,28 +519,28 @@ describe('Commands', function() {
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
 
         atom.keymaps.emitter.emit('did-match-binding', { binding: { command: 'core:move-up' } })
         await wait(10)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
 
         atom.keymaps.emitter.emit('did-match-binding', { binding: { command: 'core:move-down' } })
         await wait(10)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(0)
 
         atom.keymaps.emitter.emit('did-match-binding', { binding: { command: 'core:move-confirm' } })
         await wait(10)
-        document.body.dispatchEvent(getKeyboardEvent('keyup'))
+        dispatchEventOnBody(getKeyboardEvent('keyup'))
         await wait(10)
         expect(timesShow).toBe(1)
         expect(timesHide).toBe(1)

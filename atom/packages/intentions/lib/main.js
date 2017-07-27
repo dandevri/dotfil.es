@@ -1,6 +1,6 @@
 /* @flow */
 
-import { CompositeDisposable, Disposable } from 'atom'
+import { CompositeDisposable, Disposable } from 'sb-event-kit'
 
 import Commands from './commands'
 import ListView from './view-list'
@@ -25,7 +25,8 @@ export default class Intentions {
     this.subscriptions.add(this.providersList)
     this.subscriptions.add(this.providersHighlight)
 
-    this.commands.onListShow(async textEditor => {
+    // eslint-disable-next-line arrow-parens
+    this.commands.onListShow(async (textEditor) => {
       const results = await this.providersList.trigger(textEditor)
       if (!results.length) {
         return false
@@ -41,11 +42,11 @@ export default class Intentions {
       })
 
       subscriptions.add(listView)
-      subscriptions.add(new Disposable(() => {
+      subscriptions.add(() => {
         if (this.active === subscriptions) {
           this.active = null
         }
-      }))
+      })
       subscriptions.add(this.commands.onListMove(function(movement) {
         listView.move(movement)
       }))
@@ -58,7 +59,8 @@ export default class Intentions {
       this.active = subscriptions
       return true
     })
-    this.commands.onHighlightsShow(async textEditor => {
+    // eslint-disable-next-line arrow-parens
+    this.commands.onHighlightsShow(async (textEditor) => {
       const results = await this.providersHighlight.trigger(textEditor)
       if (!results.length) {
         return false
@@ -67,11 +69,11 @@ export default class Intentions {
       const painted = this.providersHighlight.paint(textEditor, results)
       const subscriptions = new CompositeDisposable()
 
-      subscriptions.add(new Disposable(() => {
+      subscriptions.add(() => {
         if (this.active === subscriptions) {
           this.active = null
         }
-      }))
+      })
       subscriptions.add(this.commands.onHighlightsHide(function() {
         subscriptions.dispose()
       }))

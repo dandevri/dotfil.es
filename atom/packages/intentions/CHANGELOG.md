@@ -1,3 +1,17 @@
+#### 1.1.5
+
+- Remove cache introduced in v1.1.3
+
+#### 1.1.4
+
+- Fix a regression from last release
+
+#### 1.1.3
+
+- Cache results until editor text is changed
+- Fix a bug where clicking on the list would not fire the callback
+- Fix another instance where mixing clicks + keyboard would break the list (Fixes #26)
+
 #### 1.1.2
 
 - Handle double activations gracefully (Fixes #26)
