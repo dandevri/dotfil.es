@@ -1,39 +1,20 @@
 # dotfiles
 Backup of my personal dev setup.
 
-## Programs
-* Atom 1.18.0
-* Hyper 1.3.3
+## VS Code
 
-## Atom
+### Extensions
+* `code --install-extension EditorConfig.EditorConfig`
+* `code --install-extension ms-vscode.atom-keybindings`
+* `code --install-extension dbaeumer.vscode-eslint`
+* `code --install-extension shinnn.stylelint`
 
-### Packages
-* `apm install linter`
-* `apm install pigments`
-* `apm install docblockr`
-* `apm install linter-eslint`
-* `apm install linter-csslint`
+### Settings
+All VS Code settings are in the [`settings.json`](/settings.json) file.
 
-### Theme
-`apm install atom-material-ui`
-
-* Primary color `#55B4C0`
-* Contrasting panels: ✓
-* Compact tab bar: ✓
-
-### Editor
-* Scroll past end: ✓
-* Show indent guide: ✓
-* Show Invisibles: ✓
-* Tab type: soft
-
-## Install preferences
-* Add `.hyper.js` to `~`
+## Add preferences
 * Add `.zshrc` to `~`
-
-## Global Dependencies
-* `npm i -g gitmoji-cli`
-* `npm install --global pure-prompt`
+* Add `.editorconfig` to `~`
 
 ## Install node using nvm
 ```
