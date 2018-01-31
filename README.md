@@ -12,6 +12,13 @@
 ### Settings
 All VS Code settings are in the [`settings.json`](/settings.json) file.
 
+### Theme
+* Install City Lights
+```
+git clone https://github.com/Yummygum/city-lights-syntax-vsc.git ~/.vscode/extensions/city-lights-theme
+```
+* Set *File Icon Theme* to `Seti`.
+
 ### Add preferences
 * Add `.editorconfig` to `~`
 * Add `.zshrc` to `~`
