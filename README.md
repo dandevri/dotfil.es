@@ -12,14 +12,27 @@
 ### Settings
 All VS Code settings are in the [`settings.json`](/settings.json) file.
 
-## Add preferences
-* Add `.zshrc` to `~`
+### Add preferences
 * Add `.editorconfig` to `~`
+* Add `.zshrc` to `~`
 
-## Install node using nvm
+## Shell
+* Install Oh My Zsh
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+* Install SpaceShip Prompt
 ```
-nvm install node
+npm install -g spaceship-prompt
+```
+* Install Powerline Fonts
+```
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
 ```
