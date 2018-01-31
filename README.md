@@ -1,5 +1,5 @@
 # dotfiles
-Backup of my personal dev setup.
+> Backup of my personal dev setup.
 
 ## VS Code
 
