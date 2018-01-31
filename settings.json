@@ -17,4 +17,5 @@
     "editor.cursorStyle": "line-thin",
     "editor.renderIndentGuides": true,
     "editor.renderWhitespace": "all",
+    "terminal.integrated.fontFamily": "Fira Mono for Powerline",
 }
