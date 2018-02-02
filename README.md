@@ -23,6 +23,8 @@ git clone https://github.com/Yummygum/city-lights-syntax-vsc.git ~/.vscode/exten
 * Add `.editorconfig` to `~`
 * Add `.zshrc` to `~`
 
+*I don't really use any other shell than the [Intergrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) inside VSCode.*
+
 ## Shell
 * Install Oh My Zsh
 ```
