@@ -1,0 +1,37 @@
+[user]
+
+	name = dandevri
+	email = hi@dandevri.es
+
+[alias]
+
+	a = add
+
+	b = branch -a
+
+	c = commit
+
+	cm = commit -m
+
+	co = checkout
+
+	d = diff
+
+	f = fetch
+
+	i = init
+
+	m = merge
+
+	s = status -s
+
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+    r = remote -v
+
+    alias = config --get-regexp alias
+
+[apply]
+
+	# Detect whitespace errors when applying a patch
+    whitespace = fix
