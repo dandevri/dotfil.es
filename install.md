@@ -12,11 +12,13 @@
 * `System Preferences > Keyboard > Modifier Keys > Caps Lock = ctrl`
 * `System Preferences > Keyboard > Shortcuts > Move spaces`
 * `System Preferences > Keyboard > Shortcuts > Spotlight > [x] Show spotlight search`
+* `System Preferences > a11y > Shortcuts > Disable > [v] Reduce motion`
 
 ## Applications
 
 > A list of applications that aren't provided with brew cask.
 * [Stack](https://mirror.transip.net/stack/software/Stack-osx-latest.pkg)
+* [Logitech Options](https://support.logitech.com/en_us/software/options)
 * `Alfred > General > Shortcut > cmd + space`
 * `Alfred > Appearance > option > Hide hat on Alfred window `
 * `Alfred > Appearance > option > Hide hat on Alfred window `
