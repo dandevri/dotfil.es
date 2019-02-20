@@ -95,6 +95,9 @@ defaults write com.apple.screencapture type -string "png"
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
+# Set the login message to the lock screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Danny de Vries | hi@dandevri.es | +316 41 02 52 62"
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -132,6 +135,12 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
+
+# Set the computer name
+sudo scutil --set ComputerName "nexus-9"
+
+# Set the .local name
+sudo scutil --set LocalHostName "nexus-9"
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
