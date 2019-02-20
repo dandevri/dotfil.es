@@ -1,47 +1,31 @@
 # dotfiles
 > Backup of my personal dev setup.
 
-## VS Code
+![Terminal screenshot](/docs/terminal.png)
 
-### Extensions
-* `code --install-extension EditorConfig.EditorConfig`
-* `code --install-extension ms-vscode.atom-keybindings`
-* `code --install-extension dbaeumer.vscode-eslint`
-* `code --install-extension shinnn.stylelint`
+```bash
+$ ~ git clone https://github.com/dandevri/dotfil.es.git && cd dotfil.es
+```
 
-### Settings
-All VS Code settings are in the [`settings.json`](/settings.json) file.
+## Install
 
-### Theme
-* Install City Lights
-```
-git clone https://github.com/Yummygum/city-lights-syntax-vsc.git ~/.vscode/extensions/city-lights-theme
-```
-* Set *File Icon Theme* to `Seti`.
+You need [Homebrew](https://brew.sh/) as a prerequisite for these scripts.
 
-### Add preferences
-* Add `.editorconfig` to `~`
-* Add `.zshrc` to `~`
 
-*I don't really use any other shell than the [Intergrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) inside VSCode.*
+```
+./.macOS
+./.brew.sh
+```
 
-## Shell
-* Install Oh My Zsh
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-* Install SpaceShip Prompt
-```
-npm install -g spaceship-prompt
-```
-* Install Powerline Fonts
-```
-# clone
-git clone https://github.com/powerline/fonts.git --depth=1
-# install
-cd fonts
-./install.sh
-# clean-up a bit
-cd ..
-rm -rf fonts
-```
+* Some applications and settings require [manual](/install.md) labour.
+* App specific settings are in [/apps](/apps).
+
+## Credits
+
+[Mathias Bynens](https://github.com/mathiasbynens) / [dotfiles](https://github.com/mathiasbynens/dotfiles) _(bash installer scripts)_
+
+## License
+
+[MIT][] © [Danny de Vries][git]
+
+[git]: https://www.github.com/dandevri
