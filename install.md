@@ -8,11 +8,19 @@
 * `System Preferences > Bluetooth > [v] Show Bluetooth in menu bar`
 * `System Preferences > Users & Groups > Advanced options... > Full name`
 * `System Preferences > Users & Groups > Update profile picture`
+* `System Preferences > Displays > Night Shift`
+* `System Preferences > Keyboard > Modifier Keys > Caps Lock = ctrl`
+* `System Preferences > Keyboard > Shortcuts > Move spaces`
+* `System Preferences > Keyboard > Shortcuts > Spotlight > [x] Show spotlight search`
 
 ## Applications
 
 > A list of applications that aren't provided with brew cask.
 * [Stack](https://mirror.transip.net/stack/software/Stack-osx-latest.pkg)
+* `Alfred > General > Shortcut > cmd + space`
+* `Alfred > Appearance > option > Hide hat on Alfred window `
+* `Alfred > Appearance > option > Hide hat on Alfred window `
+
 
 ## Browser
 

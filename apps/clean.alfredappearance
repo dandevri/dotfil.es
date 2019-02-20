@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 2,
+      "subtext" : {
+        "size" : 9,
+        "colorSelected" : "#FEFFFE66",
+        "font" : "System Light",
+        "color" : "#FEFFFE00"
+      },
+      "shortcut" : {
+        "size" : 13,
+        "colorSelected" : "#42424200",
+        "font" : "System Light",
+        "color" : "#00000000"
+      },
+      "backgroundSelected" : "#FEFFFE00",
+      "text" : {
+        "size" : 13,
+        "colorSelected" : "#FEFFFEFF",
+        "font" : "System Light",
+        "color" : "#FEFFFE4C"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 4,
+      "iconSize" : 23
+    },
+    "search" : {
+      "paddingVertical" : 4,
+      "background" : "#000000FF",
+      "spacing" : 10,
+      "text" : {
+        "size" : 27,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#FEFFFEFF"
+      },
+      "backgroundSelected" : "#B5D5FFFF"
+    },
+    "window" : {
+      "color" : "#000000FF",
+      "paddingHorizontal" : 0,
+      "width" : 456,
+      "borderPadding" : 1,
+      "borderColor" : "#FDFFFD00",
+      "blur" : 40,
+      "roundness" : 2,
+      "paddingVertical" : 4
+    },
+    "credit" : "Danny de Vries",
+    "separator" : {
+      "color" : "#00000000",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#FEFFFE19",
+      "thickness" : 1
+    },
+    "name" : "Black."
+  }
+}
