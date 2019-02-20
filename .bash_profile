@@ -1,3 +1,9 @@
+# Load shell files
+for file in ~/.{aliases}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
 prompt_git() {
 	local s='';
 	local branchName='';
@@ -48,6 +54,23 @@ prompt_git() {
 	fi;
 }
 
+# Directories
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Folders
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+
+alias g="git"
+alias l="ls -la"
+
 # Set the terminal prompt.
-PS1="\[\033]0;\W\007\]"; # working directory base name
+PS1="\n"; # pwd
+PS1+="\w";
+PS1+="\$(prompt_git \" on \")"; # Git repository details
+PS1+="\n";
+PS1+="> ";
 export PS1;
