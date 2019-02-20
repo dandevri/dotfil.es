@@ -19,10 +19,6 @@
 > A list of applications that aren't provided with brew cask.
 * [Stack](https://mirror.transip.net/stack/software/Stack-osx-latest.pkg)
 * [Logitech Options](https://support.logitech.com/en_us/software/options)
-* `Alfred > General > Shortcut > cmd + space`
-* `Alfred > Appearance > option > Hide hat on Alfred window `
-* `Alfred > Appearance > option > Hide hat on Alfred window `
-
 
 ## Browser
 
