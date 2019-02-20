@@ -23,6 +23,7 @@ brew cask install sketch
 brew cask install spectacle
 brew cask install alfred
 brew cask install bartender
+brew cask install iina
 brew cask install hazeover
 brew cask install istat-menus
 brew cask install private-internet-access
