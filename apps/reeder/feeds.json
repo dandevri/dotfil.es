@@ -1,0 +1,46 @@
+{"feeds": {
+    "news": {
+        "nos": "http://feeds.nos.nl/nosnieuwsalgemeen",
+        "nu": "www.nu.nl/rss/Algemeen",
+        "nh": "https://rss.nhnieuws.nl/rss"
+    },
+    "tech": {
+        "nos": "http://feeds.nos.nl/nosnieuwstech",
+        "nu": "www.nu.nl/rss/Internet",
+        "verge": "https://www.theverge.com/rss/index.xml",
+        "hackernews": "https://news.ycombinator.com/rss",
+        "wired": "https://www.wired.com/category/gear/feed",
+        "char.gd": "https://char.gd/rss"
+    },
+    "tools": {
+        "producthunt": "https://www.producthunt.com/feed?category=undefined",
+    },
+    "games": {
+        "laadscherm": "https://laadscherm.nl/feed",
+        "kotaku": "https://kotaku.com/rss",
+        "polygon": "https://www.polygon.com/rss/index.xml"
+    },
+    "clothing": {
+        "hypebeast": "https://feeds.feedburner.com/hypebeast/feed",
+        "highsnobiety": "https://www.highsnobiety.com/feed",
+        "kicksonfire": "www.kicksonfire.com/feed/",
+        "complex-style": "https://assets.complex.com/feeds/channels/style.xml",
+        "complex-sneaker": "https://assets.complex.com/feeds/channels/sneakers.xml"
+    },
+    "design": {
+        "design-milk": "https://feeds.feedburner.com/design-milk",
+        "apartment-therapy": "https://www.apartmenttherapy.com/main.rss",
+        "interior-design": "https://www.interiordesign.net/rss",
+        "interface-lovers": "https://interfacelovers.com/fee"
+    },
+    "development": {
+        "css-tricks": "https://css-tricks.com/rss",
+        "a-list-apart": "https://alistapart.com/main/feed",
+        "smashing": "https://www.smashingmagazine.com/feed"
+    },
+    "people": {
+        "sara": "https://www.sarasoueidan.com/blog/index.xml",
+        "ethan": "https://ethanmarcotte.com/wrote/feed.xml",
+        "tobias": "https://www.vanschneider.com/blog/feed"
+    }
+  }}
