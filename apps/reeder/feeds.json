@@ -10,15 +10,15 @@
         "verge": "https://www.theverge.com/rss/index.xml",
         "hackernews": "https://news.ycombinator.com/rss",
         "wired": "https://www.wired.com/category/gear/feed",
-        "char.gd": "https://char.gd/rss"
+        "arstechnica": "https://arstechnica.com/rss"
     },
     "tools": {
         "producthunt": "https://www.producthunt.com/feed?category=undefined",
     },
     "games": {
-        "laadscherm": "https://laadscherm.nl/feed",
         "kotaku": "https://kotaku.com/rss",
-        "polygon": "https://www.polygon.com/rss/index.xml"
+        "polygon": "https://www.polygon.com/rss/index.xml",
+        "ign": "https://nl.ign.com/rss"
     },
     "clothing": {
         "hypebeast": "https://feeds.feedburner.com/hypebeast/feed",
@@ -37,10 +37,5 @@
         "css-tricks": "https://css-tricks.com/rss",
         "a-list-apart": "https://alistapart.com/main/feed",
         "smashing": "https://www.smashingmagazine.com/feed"
-    },
-    "people": {
-        "sara": "https://www.sarasoueidan.com/blog/index.xml",
-        "ethan": "https://ethanmarcotte.com/wrote/feed.xml",
-        "tobias": "https://www.vanschneider.com/blog/feed"
     }
   }}
