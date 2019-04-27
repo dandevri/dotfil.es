@@ -10,7 +10,8 @@
         "verge": "https://www.theverge.com/rss/index.xml",
         "hackernews": "https://news.ycombinator.com/rss",
         "wired": "https://www.wired.com/category/gear/feed",
-        "arstechnica": "https://arstechnica.com/rss"
+        "arstechnica": "https://arstechnica.com/rss",
+        "daringfireball": "https://daringfireball.net/feeds/main"
     },
     "tools": {
         "producthunt": "https://www.producthunt.com/feed?category=undefined",
