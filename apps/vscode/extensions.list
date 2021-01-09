@@ -1,9 +1,14 @@
 aaron-bond.better-comments
 adpyke.codesnap
 anteprimorac.html-end-tag-labels
+bierner.color-info
+bierner.emojisense
+bierner.markdown-checkbox
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 CoenraadS.bracket-pair-colorizer
+darkriszty.markdown-table-prettify
+DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 donjayamanne.githistory
 eamodio.gitlens
@@ -15,9 +20,12 @@ esbenp.prettier-vscode
 eseom.nunjucks-template
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
+hancel.markdown-image
 johnpapa.vscode-cloak
+kisstkondoros.vscode-gutter-preview
 mikestead.dotenv
 ms-vscode.atom-keybindings
+naumovs.color-highlight
 ritwickdey.LiveServer
 Shan.code-settings-sync
 stylelint.vscode-stylelint
