@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<opml version="1.1">
+  <head>
+    <title>Castro Podcast Feeds</title>
+  </head>
+  <body>
+    <outline xmlUrl="https://shoptalkshow.com/feed/podcast" text="ShopTalk" title="ShopTalk" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feeds.megaphone.fm/darknetdiaries" text="Darknet Diaries" title="Darknet Diaries" type="rss" version="RSS"/>
+    <outline xmlUrl="https://anchor.fm/s/12b2d740/podcast/rss" text="De Geldvrienden podcast" title="De Geldvrienden podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feeds.podcastmirror.com/haykranen" text="Hay Kranen legt het internet uit" title="Hay Kranen legt het internet uit" type="rss" version="RSS"/>
+    <outline xmlUrl="https://rss.art19.com/een-podcast-over-media" text="Een Podcast over Media" title="Een Podcast over Media" type="rss" version="RSS"/>
+    <outline xmlUrl="https://www.glitch.show/rss" text="Glitch Podcast" title="Glitch Podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="https://astridenvasilis.nl/praten-makkelijk/feed/mp3/" text="Astrid en Vasilis praten makkelijk" title="Astrid en Vasilis praten makkelijk" type="rss" version="RSS"/>
+    <outline xmlUrl="https://anchor.fm/s/839cf1c/podcast/rss" text="F1 Aan Tafel" title="F1 Aan Tafel" type="rss" version="RSS"/>
+    <outline xmlUrl="https://rss.art19.com/met-nerds-om-tafel" text="Met Nerds om Tafel" title="Met Nerds om Tafel" type="rss" version="RSS"/>
+    <outline xmlUrl="https://layout.fm/rss" text="Layout" title="Layout" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feed.syntax.fm/rss" text="Syntax - Tasty Web Development Treats" title="Syntax - Tasty Web Development Treats" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feeds.simplecast.com/rZ0cYk12" text="Your Undivided Attention" title="Your Undivided Attention" type="rss" version="RSS"/>
+    <outline xmlUrl="https://rss.art19.com/de-de-speld-podcast" text="De De Speld Podcast" title="De De Speld Podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feeds.buzzsprout.com/310172.rss" text="De Podcast Psycholoog" title="De Podcast Psycholoog" type="rss" version="RSS"/>
+    <outline xmlUrl="https://rss.art19.com/vandaag" text="NRC Vandaag" title="NRC Vandaag" type="rss" version="RSS"/>
+    <outline xmlUrl="http://feeds.feedburner.com/WaveformWithMkbhd" text="Waveform: The MKBHD Podcast" title="Waveform: The MKBHD Podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="https://pinecast.com/feed/ladybug-podcast" text="Ladybug Podcast" title="Ladybug Podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="https://rss.art19.com/tim-ferriss-show" text="The Tim Ferriss Show" title="The Tim Ferriss Show" type="rss" version="RSS"/>
+    <outline xmlUrl="https://anchor.fm/s/840a38c/podcast/rss" text="Lekker spreken" title="Lekker spreken" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feeds.megaphone.fm/replyall" text="Reply All" title="Reply All" type="rss" version="RSS"/>
+    <outline xmlUrl="http://feeds.devpods.dev/devdiscuss_podcast.xml" text="DevDiscuss" title="DevDiscuss" type="rss" version="RSS"/>
+    <outline xmlUrl="https://rss.art19.com/verwondering" text="Verwondering met Harald Dunnink" title="Verwondering met Harald Dunnink" type="rss" version="RSS"/>
+    <outline xmlUrl="https://www.omnycontent.com/d/playlist/33dbd2dc-d464-471d-9feb-abae00330078/ed6f6972-a49d-4979-be1d-abae00cd3a92/70ce1b8c-8e0d-4029-9f69-abae00cd3a97/podcast.rss" text="Tweakers Podcast" title="Tweakers Podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:732188095/sounds.rss" text="VPRO Gids: Backspace" title="VPRO Gids: Backspace" type="rss" version="RSS"/>
+    <outline xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:388749252/sounds.rss" text="Even doorpraten" title="Even doorpraten" type="rss" version="RSS"/>
+    <outline xmlUrl="https://beginnenmetbitcoin.com/podcast.rss" text="Beginnen met Bitcoin" title="Beginnen met Bitcoin" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feeds.fireside.fm/q42/rss" text="Q42 Podcast" title="Q42 Podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="https://www.omnycontent.com/d/playlist/33dbd2dc-d464-471d-9feb-abae00330078/1b9e72de-57a6-491f-8997-abae00944350/e5bec5cf-b8ce-4381-a42a-abae00944350/podcast.rss" text="Beschaving: De Nabeschouwing (met Tim Fransen)" title="Beschaving: De Nabeschouwing (met Tim Fransen)" type="rss" version="RSS"/>
+    <outline xmlUrl="https://feeds.transistor.fm/smashing" text="Smashing Podcast" title="Smashing Podcast" type="rss" version="RSS"/>
+    <outline xmlUrl="https://f002.backblazeb2.com/file/snuggere-zaken/feed.xml" text="Snuggere Zaken Archief" title="Snuggere Zaken Archief" type="rss" version="RSS"/>
+    <outline xmlUrl="https://f002.backblazeb2.com/file/appels-en-peren-show/feed.xml" text="De Appels en Peren Show" title="De Appels en Peren Show" type="rss" version="RSS"/>
+    <outline xmlUrl="https://rss.art19.com/jong-beleggen-de-podcast" text="Jong Beleggen, de podcast" title="Jong Beleggen, de podcast" type="rss" version="RSS"/>
+  </body>
+</opml>
